@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+         <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <style>
+
+
+
+      </style>
+    </head>
+
+    <body>
+        <nav>
+            <div class="nav-wrapper green accent-5">
+              <a href="#!" class="brand-logo " style="padding-left: 10px; font-size: large;">Parth-wholesale </a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="Add-category.html">Home</a></li>
+                <li><a href="#">Product Upload</a></li>
+                <li><a href="#">Javascript</a></li>
+                <li><a href="#">Mobile</a></li>
+              </ul>
+            </div>
+          </nav>
+        
+          <ul class="sidenav" id="mobile-demo">
+            <li><a href="Add-category.html">Home</a></li>
+            <li><a href="#">Product Upload</a></li>
+            <li><a href="#">Javascript</a></li>
+            <li><a href="#">Mobile</a></li>
+          </ul>
+<br><br>
+          
+
+<div class="container"><!-- main conatiner start-->
+ 
+
+       <div class="card "><!--main card start -->
+
+         <h4 class="center-align" style="padding: 15px;" >Add Items</h4>
+
+         <div class="card-content"><!-- main card with imp content start -->
+
+
+           <!--animation start-->
+            <lottie-player class="center-align" src="https://assets10.lottiefiles.com/private_files/lf30_mAyV0V.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px; margin: auto;"  loop  autoplay></lottie-player>
+           <!--animation end-->
+
+
+              <div class="row"><!--main row which have all the elemenets start-->
+
+                <form class="col s12"><!--main form with all elements start-->
+
+                    <div class="row"><!--sub row div for brand name and drop down start-->
+
+                      <div class="input-field col s12"><!--input feild of brand name start-->
+                      
+                      <input id="icon_prefix" type="text" class="validate ">
+                      <label for="icon_prefix" >Brand Name / Product Name</label>
+
+                      
+                      </div><!--input feild of brand name End-->
+
+
+                      <div class="input-field col s12 green-text"><!--dropdown of price start-->
+                        <select>
+                          <option value="" disabled selected>Choose your option</option>
+                          <option value="1">Fixed</option>
+                          <option value="2">Variable</option>
+                          
+                        </select>
+                        <label>Materialize Select</label>
+                      </div><!--dropdown of price end-->
+                      
+                    </div><!--sub row div for brand name and drop down end-->
+
+
+                     <div class="card" style="width: 100%;"><!--this card is for image start-->
+
+                             <div class="card-image">
+                              <img id="blah" src="https://www.netclipart.com/pp/m/273-2733967_logo-cloud-storage-png.png" alt="your image">
+                             </div>
+                    
+                     </div><!--this card is for image end-->
+
+                     <div class="file-field input-field"><!--div for upload image button start-->
+                      <div class="btn green accent-5">
+                       <i style="font-size: 30px" class="material-icons">collections</i>
+                        <input type="file" onchange="readURL(this);">
+                       </div>
+                       <div class="file-path-wrapper">
+                         <input class="file-path validate" type="text" placeholder="Upload files">
+                       </div>
+                     </div><!--div for upload image button end-->
+
+
+                </form><!--main form with all elements end-->
+                
+              </div><!--main row which have all the elemenets end-->
+              <div class="center-align" style="margin: auto;" ><!--save button start-->
+                <a class="waves-effect waves-light btn green "  ><i class="material-icons left"></i>save</a>
+              </div><!--save button end-->
+              
+         </div><!-- main card with imp content end -->
+     
+     
+      </div><!--main card end -->
+
+   
+</div><!-- main conatiner end-->
+
+
+
+       
+      <!--JavaScript at end of body for optimized loading-->
+      <script> 
+       M.AutoInit();
+      
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, options);
+      });</script>
+      
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script>
+     function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+      </script>
+      <script>
+          document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.fixed-action-btn');
+    var instances = M.FloatingActionButton.init(elems, {
+      direction: 'left'
+    });
+  });
+      </script>
+    </body>
+  </html>
+        
